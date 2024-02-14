@@ -35,9 +35,7 @@
       margin: 10px 10px 10px 10px;
     }
 
-
     thead {
-      background-color: cadetblue;
       font-size: bolder;
     }
 
@@ -62,33 +60,48 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-weight: bold;
     }
-    .form-control:hover{
+
+    .form-control:hover {
       box-shadow: 5px 5px 5px 5px;
+    }
+
+    .card {
+      border-image: auto;
+      border-image-slice: 1;
+    }
+
+    .card:hover {
+      box-shadow: inset;
+    }
+
+    .card-body {
+      margin-block: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+
     }
   </style>
 </head>
 
 <body>
   <h1>Have a cup with Benitha Sri Panchagiri</h1>
-
-  <nav class="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand">NAVBAR</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="drinks.html">A Few Drinks</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NAVBAR</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <div class="navbar">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="basic.html">Basic</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="advance.html">Advance</a></li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="basic.html">Basic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="advanced.html">Advanced</a>
+          </li>
+        </ul>
       </div>
-  </nav>
+    </nav>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -106,6 +119,7 @@
     <div class="row">
 
       <div class="col-md">PEPSI</div>
+
       <div class="col-md"> AMERICANO</div>
       <div class="col-md"> NUTELLA DRINK</div>
       <div class="col-md"> CHAI</div>
@@ -115,12 +129,13 @@
     </div>
   </div>
   <hr>
-  <div style="padding: 2px; background-color: aliceblue; border: 1px solid black;box-shadow: 10px 10px grey;">
+  <div class="container"
+    style="padding: 2px; background-color: aliceblue; border: 1px solid black;box-shadow: 10px 10px grey;">
     <p>
       When page sixe is reduced, the div class row with class col-md breaks first, then the class with col-sm-2
       breaks.<br>
       This is beacuse the col-md(column space medium) takes more horizontal space when compared to col-sm-2(column space
-      small) and <br>
+      small) and
       hence, the div with drinks name breaks first
     </p>
   </div>
@@ -142,8 +157,8 @@
     <table class="table">
 
       <caption style="caption-side: top; text-align: center;">TABLE</caption>
-      <thead class="thead">
-        <tr>
+      <thead>
+        <tr class="table-dark">
           <th scope="col">#</th>
           <th scope="col">LETTER</th>
           <th scope="col">DRINK</th>
@@ -160,7 +175,7 @@
           <td class="td">POLARIS</td>
           <td class="td">PINK SALMON</td>
         </tr>
-        <tr>
+        <tr class="table-light">
           <th scope="row">2</th>
           <td class="td">A</td>
           <td class="td">AMERICANO</td>
@@ -174,7 +189,7 @@
           <td class="td">NASHIRA</td>
           <td class="td">NEEDLE FISH</td>
         </tr>
-        <tr>
+        <tr class="table-light">
           <th scope="row">4</th>
           <td class="td">C</td>
           <td class="td">CHAI</td>
@@ -213,21 +228,23 @@
       <button type="button" class="btn btn-danger">N</button>
     </div>
   </div>
-  <div class="dropdown">
-    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu">
-      <ul>
-        <li><a class="dropdown-item" href="basic.html">Basic</a></li>
-        <li><a class="dropdown-item" href="advance.html">Adavance</a></li>
-      </ul>
+  <div class="container">
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a class="dropdown-item" href="basic.html">Basic</a></li>
+          <li><a class="dropdown-item" href="advance.html">Adavance</a></li>
+        </ul>
 
+      </div>
     </div>
   </div>
   <hr>
-  <div>
+  <div class="container">
     <form>
       <div class="form-group">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -246,7 +263,35 @@
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
+  <div class="container">
+    <div class="card-group">
 
+      <div class="card" style="width: 18rem;">
+        <img src="hotChocolet.jpeg" width="auto" height="auto">
+        <div class="card-body">
+          <h5 class="card-title">Hot Chocolet</h5>
+          <p class="card-text">Hot Chocolet tastes better with Marshmellows.</p>
+          <a href="hotChocolet_Marshmellows.jpeg" class="card-link">Hot Chocolet with Marshmellows</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="Chai.jpg" width="auto" height="auto">
+        <div class="card-body">
+          <h5 class="card-title">Chai</h5>
+          <p class="card-text">Chai is a hot drink.</p>
+          <a href="Tea.jpg" class="card-link">Chai</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="almond-milk.jpg" width="auto" height="auto">
+        <div class="card-body">
+          <h5 class="card-title">Almond Milk</h5>
+          <p class="card-text">Almond milk is healthy!</p>
+          <a href="AlmondMilk'.jpg" class="card-link">Almond Milk</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
